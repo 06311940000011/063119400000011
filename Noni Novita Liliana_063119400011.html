@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <title> ETS_Noni Novita Liliana_06311940000011 </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        const labels = [
+            'Aceh ',
+            'Sumatera Utara',
+            'Sumatera Barat',
+            'Riau',
+            'Jambi',
+            'Sumatera Selatan ',
+            'Bengkulu',
+            'Lampung',
+            'Kepualan Bangka Belitung',
+            'Kepualan Riau',
+            'DKI Jakarta',
+            'Jawa Barat ',
+            'Jawa Tengah ',
+            'D.I Yogyakarta',
+            'Jawa Timur',
+            'Banten',
+            'Bali',
+            'Nusa Tenggara Barat',
+            'Nusa Tenggara Timur',
+            'Kalimantan Barat',
+            'Kalimantan Tengah',
+            'Kalimantan Selatan',
+            'Kalimantan Timur',
+            'Kalimantan Utara',
+            'Sulawesi Utara ',
+            'Sulawesi Tengah',
+            'Sulawesi Selatan',
+            'Sulawesi Tenggara',
+            'Gorontalo',
+            'Sulawesi Barat',
+            'Maluku',
+            'Maluku Utara',
+            'Papua Barat',
+            'Papua ',
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Laki-Laki',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [68.07,
+67.35,
+67.7,
+69.82,
+69.33,
+68.11,
+67.54,
+68.86,
+68.86,
+68.24,
+71.21,
+71.57,
+72.61,
+73.27,
+69.51,
+68.15,
+70.39,
+64.81,
+65.28,
+68.87,
+67.89,
+66.97,
+72.79,
+70.69,
+69.89,
+66.91,
+68.77,
+69.35,
+66.27,
+63.39,
+64.23,
+66.55,
+64.33,
+64.15
+],
+            },
+        {
+            label: 'Perempuan',
+      data: [71.94,
+71.21,
+71.57,
+73.62,
+73.19,
+71.95,
+71.4,
+72.69,
+72.7,
+72.07,
+74.91,
+75.19,
+76.42,
+76.89,
+73.35,
+71.99,
+74.17,
+68.66,
+69.11,
+72.74,
+71.72,
+70.79,
+76.51,
+74.48,
+73.72,
+70.85,
+72.65,
+73.37,
+70.21,
+67.19,
+68.05,
+70.44,
+68.05,
+67.79
+],
+      borderColor: 'rgb(216,191,216)',
+      backgroundColor: 'rgb(216,191,216)',
+        }]
+        };
+
+        const config = {
+  type: 'line',
+  data: data,
+  options: {
+    animations: {
+      tension: {
+        duration: 1000,
+        easing: 'linear',
+        from: 1,
+        to: 0,
+        loop: true
+      }
+    },
+    scales: {
+      y: { // defining min and max so hiding the dataset does not change scale range
+        min: 0,
+        max: 100
+      }
+    }
+  },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Angka Harapan Hidup Tiap Provinsi 2021'
+      }
+    }
+  };
+    </script>
+
+    <script>
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+
+</body>
+
+</html>
